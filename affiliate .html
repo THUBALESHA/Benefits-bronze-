@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Affiliate Program</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header><h2>Affiliate Program</h2></header>
+
+<div class="container">
+
+<h3>Earn 10% Commission on Every Sale</h3>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="email" id="email" placeholder="Email Address">
+
+<br>
+<button class="btn" onclick="apply()">Submit Application</button>
+
+</div>
+
+<script>
+function apply(){
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+
+if(name=="" || email==""){
+alert("Please complete all fields");
+return;
+}
+
+let message = "New Affiliate Application\nName: "+name+"\nEmail: "+email;
+
+window.open("https://wa.me/27787102337?text="+encodeURIComponent(message));
+}
+</script>
+
+</body>
+</html>
